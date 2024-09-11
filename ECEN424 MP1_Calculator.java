@@ -5,7 +5,7 @@ public class Calculator {
     {
         return A + B;
     }
-    public Float subtraction(Float A, FLoat B)
+    public Float subtraction(Float A, Float B)
     {
         return A - B;
     }
