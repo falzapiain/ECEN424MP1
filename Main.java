@@ -26,11 +26,24 @@ public class Main {
             // Read arguments from user
             System.out.println("Enter argument 1:");
             String num1_str = input.nextLine();
-            Float num1 = Float.parseFloat(num1_str);
+            Float num1 = null;
+            try{
+                num1 = Float.parseFloat(num1_str);
+            } catch (java.lang.NumberFormatException e) {
+                System.out.println("Invalid Float.");
+                continue;
+            }
+            
 
             System.out.println("Enter argument 2:");
             String num2_str = input.nextLine();
-            Float num2 = Float.parseFloat(num2_str);
+            Float num2 = null;
+            try{
+                num2 = Float.parseFloat(num2_str);
+            } catch (java.lang.NumberFormatException e) {
+                System.out.println("Invalid Float.");
+                continue;
+            }            
 
             Float result;
             String result_str = "";
@@ -46,7 +59,7 @@ public class Main {
                     result_str = "The difference of " + num1 + " and " + num2 + " is " + result;
                     break;
                 case "M":
-                    result = mycalc.multiplication(num2, num2);
+                    result = mycalc.multiplication(num1, num2);
                     result_str = "The product of " + num1 + " and " + num2 + " is " + result;
                     break;
             }
